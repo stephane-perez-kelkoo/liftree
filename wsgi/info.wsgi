@@ -17,5 +17,5 @@ def application(environ, start_response):
     output = pprint.pformat(data).encode('utf-8')
     response_headers = [('Content-type', CONTENT_TYPE_TEXT),
                         ('Content-Length', str(len(output)))]
-    start_response(status, response_headers, sys.exc_info())
+    start_response(status, response_headers)
     return [output]
