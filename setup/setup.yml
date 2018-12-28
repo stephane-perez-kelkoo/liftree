@@ -40,6 +40,7 @@
         src: httpd.conf
         dest: /etc/httpd/conf.d/liftree.conf
 
-#    - systemd:
-#        name: httpd
-#        state: restarted
+    - systemd:
+        name: httpd
+        state: restarted
+      ignore_errors: true
